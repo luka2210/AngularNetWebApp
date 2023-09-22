@@ -1,1 +1,26 @@
-<p>employees-list works!</p>
+<div class="container my-5">
+    <h1 class="mb-3"> Employees </h1>
+    <table class="table" *ngIf="employees.length > 0"> 
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <th>{{ employee.id }}</th>
+                <th>{{ employee.name }}</th>
+                <th>{{ employee.email }}</th>
+                <th>{{ employee.department }}</th>
+                <th>{{ employee.salary }}</th>
+                <th>{{ employee.phone }}</th>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="employees.length == 0"> No employees found. </p>
+</div> 
