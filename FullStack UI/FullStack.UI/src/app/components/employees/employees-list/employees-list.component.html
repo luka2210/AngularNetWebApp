@@ -9,6 +9,7 @@
                 <th>Department</th>
                 <th>Salary</th>
                 <th>Phone</th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                 <th>{{ employee.department }}</th>
                 <th>{{ employee.salary }}</th>
                 <th>{{ employee.phone }}</th>
+                <th><a [routerLink]="['employees', 'edit', employee.id]"> Edit </a></th>
             </tr>
         </tbody>
     </table>
