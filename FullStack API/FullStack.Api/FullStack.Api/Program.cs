@@ -34,6 +34,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Enable CORS for every origin (bad practice)
+app.UseCors(policyName => policyName.AllowAnyHeader()
+                                    .AllowAnyMethod()
+                                    .AllowAnyOrigin());
+
 app.UseAuthorization();
 
 app.MapControllers();
